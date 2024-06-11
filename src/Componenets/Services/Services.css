@@ -1,0 +1,26 @@
+#services{
+    background: #161513;
+    height: max-content;
+}
+.services-title{
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(0deg, rgba(195,34,56,1) 0%, rgba(245,86,42,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.service-card-title{
+    font-size: 28px;
+    font-weight: 640;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.service-card-desc{
+    color: #B923E0;
+    font-size: 22px;
+    line-height: 40px;
+    max-width: 500px;
+}
