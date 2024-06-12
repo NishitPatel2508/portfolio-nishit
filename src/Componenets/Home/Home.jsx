@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import profile_nishit from "../../assets/profile_nishit.jpeg";
-import { Link } from "react-router-dom";
 import Nishit_Resume from "../../Files/Nishit_Resume.pdf";
 const Home = () => {
   const btnStyle = {
@@ -17,6 +16,7 @@ const Home = () => {
     color: "white",
     fontSize: "17px",
     fontWeight: "500",
+    border: "1px solid #DA7C25 ",
     textAlign: "center",
   };
   const btnResumeStyle = {
@@ -48,7 +48,9 @@ const Home = () => {
           </Row>
           <Row className="mt-2">
             <Col
-              // lg={12}
+              xs={12}
+              md={12}
+              lg={12}
               className="d-flex justify-content-center align-items-center"
             >
               <h1 className="home-text">
@@ -57,7 +59,7 @@ const Home = () => {
               </h1>
             </Col>
           </Row>
-          <Row className="mt-2">
+          <Row className="mt-2 d-flex">
             <Col className="home-text2 d-flex justify-content-center">
               <p>I am fresher with the strong foundation in MERN.</p>
             </Col>
@@ -70,9 +72,13 @@ const Home = () => {
               className="d-flex justify-content-center gap-3"
             >
               {/* <Stack direction="horizontal" gap={3}> */}
-              <div className="btnConnectStyle" style={btnStyle} href="#contact">
+              <Button
+                className="btnConnectStyle"
+                style={btnStyle}
+                href="#contact"
+              >
                 Connect with me
-              </div>
+              </Button>
               <Button
                 className="btnResumeStyle"
                 style={btnResumeStyle}

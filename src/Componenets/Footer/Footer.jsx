@@ -10,17 +10,9 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <section id="footer">
-      <Container className="mb-5">
-        <Row>
-          <Col md={12}>
-            {/* <p className="fs-5 text-white">
-              I'm Nishit Patel, MERN Stack Developer based in India I am fresher
-              with the strong foundation in MERN.
-            </p> */}
-          </Col>
-        </Row>
-        <hr className="text-white" />
-        <Row className="mt-3 text-white fs-5 mb-5">
+      <Container className="mb-5 ">
+        <Row className="text-white fs-5 ">
+          <hr />
           <Col md={3} className="d-flex justify-content-center ">
             <p>@2024 Nishit Patel. All rights</p>
           </Col>
@@ -28,7 +20,7 @@ const Footer = () => {
             <p>Terms of Services</p>
             <p>Privacy Policy</p>
           </Col>
-          <Col md={3} className="d-flex justify-content-center gap-4 ">
+          <Col md={3} className="d-flex justify-content-center gap-4 mb-4">
             <a
               href="https://www.linkedin.com/in/nishit-patel-6650b1188/"
               className="fs-5"

@@ -126,7 +126,7 @@ const Contact = () => {
                   style={{ fontSize: "16px", cursor: "pointer" }}
                 >
                   <a
-                    href="tel:6355242731"
+                    href="tel:+91 6355242731"
                     style={{ textDecoration: "none", color: "#ffff" }}
                   >
                     +91 6355242731{" "}

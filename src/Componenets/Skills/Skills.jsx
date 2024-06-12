@@ -57,6 +57,7 @@ const Skills = () => {
                               striped
                               variant="danger"
                               now={i.rank}
+                              label={`${i.rank}%`}
                               style={{ color: "#B923E1" }}
                             />
                             {/* </div> */}
