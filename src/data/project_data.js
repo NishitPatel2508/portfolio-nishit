@@ -2,16 +2,19 @@ import {DiReact} from "react-icons/di";
 import {FaNodeJs} from "react-icons/fa";
 import {SiExpress,SiMongodb} from "react-icons/si";
 import { SiHtml5 } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
-import { SiAdobexd } from "react-icons/si";
+// import { TbBrandReactNative } from "react-icons/tb";
+// import { SiAdobexd } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io5";
-import reactjsimg from "../assets/reactjsimg.png"
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaBootstrap } from "react-icons/fa";
+import reactjsimg from "../assets/reactjsimg.png"
+import brainwave from "../assets/brainwave.png"
+import t1 from "../assets/t1.png"
+
 export const project_data = [    { 
     id:1,
     title: 'Temmplate 1',
-    image: `${reactjsimg}`,
+    image: `${t1}`,
     category:"Frontend",
     data:{
        description: `This template made with HTML,Css, JavaScript and Bootstrap.`,
@@ -43,11 +46,11 @@ export const project_data = [    {
   {
     id:2,
     title: 'Password Generator',
-    image: 'https://cdn.dribbble.com/userupload/8002230/file/original-c8eec16edea4d5c836b2bfabe7fbaa5a.jpg',
+    image: `${reactjsimg}`,
     category:"Frontend",
     data:{
       description:`This project is made with React Library. User can generate their password according their requirement of length of password, number and special charator. `,
-      demoLink: "https://dashboard.ngrok.com/cloud-edge/endpoints",
+      demoLink: "https://nishitpatel2508.github.io/passwordgenerator/",
     },
     stack:[
       {
@@ -60,7 +63,7 @@ export const project_data = [    {
   {
     id:3,
     title: 'Brainwave - Online Learning platform for Skill Development',
-    image: 'https://s3-alpha.figma.com/hub/file/5101537097/c4a1ed2c-4ab9-43fb-a248-d7ac6b0c3161-cover.png',
+    image: `${brainwave}`,
     category:"Fullstack",
     data:{
       description: `OLPSD aims to bridge this gap by offering a comprehensive solution that leverages 

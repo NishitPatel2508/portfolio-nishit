@@ -3,10 +3,8 @@ import "./Services.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Stack from "react-bootstrap/Stack";
 import Card from "react-bootstrap/Card";
 import Services_Data from "../../data/services_data";
-import ThemeProvider from "react-bootstrap/ThemeProvider";
 const Services = () => {
   return (
     <section id="services" className="d-flex ">
@@ -20,7 +18,6 @@ const Services = () => {
         </Row>
         <Container className="mt-5 ">
           <Row className="mt-2 " gap={3}>
-            {/* <Col lg={12} className="home-text2 d-flex gap-3"> */}
             {Services_Data.map((item) => {
               return (
                 <Col

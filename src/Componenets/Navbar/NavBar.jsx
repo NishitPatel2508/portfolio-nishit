@@ -5,18 +5,18 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 const NavBar = () => {
   const btnStyle = {
     cursor: "pointer",
-    padding: "5px 30px",
+    padding: "5px 20px",
     borderRadius: "50px",
     background: "linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%)",
     color: "white",
     fontSize: "17px",
-    fontWeight: "500",
+    fontWeight: "400",
     border: "1px solid #DA7C25",
+    textAlign: "center",
   };
   return (
     <>
@@ -84,7 +84,7 @@ const NavBar = () => {
                     aria-label="Search"
                   /> */}
                   <Button style={btnStyle} href="#contact">
-                    Contact Me
+                    Contact With Me
                   </Button>
                 </Form>
               </Offcanvas.Body>

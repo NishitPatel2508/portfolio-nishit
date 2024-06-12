@@ -4,15 +4,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
 import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import { CiShare1 } from "react-icons/ci";
 
 import Card from "react-bootstrap/Card";
-// import project_data from "../../data/project_data";
+
 import { project_data } from "../../data/project_data";
 const tabs = [{ name: "All" }, { name: "Frontend" }, { name: "Fullstack" }];
 const Projects = () => {
@@ -22,7 +19,7 @@ const Projects = () => {
       return setDisplayAbleProjects(project_data);
     }
     const pro = project_data.filter(
-      (item) => item.category.toLowerCase() == category.toLowerCase()
+      (item) => item.category.toLowerCase() === category.toLowerCase()
     );
     setDisplayAbleProjects(pro);
   };
@@ -81,7 +78,8 @@ const Projects = () => {
                                 <Card
                                   style={{
                                     height: "max-content",
-                                    width: "18rem",
+                                    // width: "18rem",
+                                    // overflow: "hidden",
                                     marginTop: "1rem",
                                     color: "white",
                                   }}
@@ -98,7 +96,7 @@ const Projects = () => {
                                     <div
                                       style={{
                                         marginTop: "2px",
-                                        height: "3rem",
+                                        height: "4rem",
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "start",
