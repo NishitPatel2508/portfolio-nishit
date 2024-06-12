@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio-nishit/static/css/main.de77d3b4.css",
+    "main.js": "/portfolio-nishit/static/js/main.a0fed1c9.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio-nishit/static/js/453.1407b060.chunk.js",
+    "static/media/profile_nishit.jpeg": "/portfolio-nishit/static/media/profile_nishit.4e839ea4fff4dfca9b51.jpeg",
+    "static/media/Nishit_Resume.pdf": "/portfolio-nishit/static/media/Nishit_Resume.85ef3aa05032c15e0c19.pdf",
+    "index.html": "/portfolio-nishit/index.html",
+    "main.de77d3b4.css.map": "/portfolio-nishit/static/css/main.de77d3b4.css.map",
+    "main.a0fed1c9.js.map": "/portfolio-nishit/static/js/main.a0fed1c9.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio-nishit/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de77d3b4.css",
+    "static/js/main.a0fed1c9.js"
+  ]
+}
