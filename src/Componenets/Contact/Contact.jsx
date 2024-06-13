@@ -12,16 +12,6 @@ import Form from "react-bootstrap/Form";
 import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
-  const btnStyle = {
-    cursor: "pointer",
-    padding: "12px 30px",
-    borderRadius: "50px",
-    background: "linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%)",
-    color: "white",
-    fontSize: "17px",
-    fontWeight: "500",
-    border: "1px solid #DA7C25",
-  };
   const [msg, setMsg] = useState("");
   const [nameValue, setName] = useState("");
   const [userMsg, setUserMsg] = useState("");
@@ -68,8 +58,8 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="d-flex  ">
-      <Container className="mb-5">
+    <section id="contact" className="d-flex  justify-content-center">
+      <Container className="mb-1 mt-3">
         {" "}
         {/* <Stack gap={4}> */}
         <Row>
@@ -77,7 +67,7 @@ const Contact = () => {
             <h1 className="contact-title">Get in touch</h1>
           </Col>
         </Row>
-        <Row className=" p-3" gap={3}>
+        <Row className="p-3" gap={3}>
           <Col
             lg="6"
             className="contact-left p-3"
@@ -96,7 +86,7 @@ const Contact = () => {
               </Col>
             </Row>
             <Row className="text-white ">
-              <Col md={12} className="d-flex gap-3 ">
+              <Col md={12} className="d-flex gap-2 ">
                 <p style={{ fontSize: "16px", cursor: "pointer" }}>
                   <MdEmail className="iconStyle" />
                 </p>
@@ -148,12 +138,12 @@ const Contact = () => {
           <Col
             xs
             lg="6"
-            className="d-flex justify-content-center  p-3 "
-            gap={3}
+            className="d-flex justify-content-center  p-2 "
+            // gap={3}
           >
             <Form className="w-100" onSubmit={onSubmit}>
               <Form.Group
-                className="mb-3 pr-3"
+                className="mb-2 pr-3"
                 // controlId="exampleForm.ControlInput1"
               >
                 <Form.Label className="text-white fs-5">Your Name</Form.Label>
@@ -196,14 +186,16 @@ const Contact = () => {
                 />
               </Form.Group>
               {/* <label className="text-white text-center">Nishit</label> */}
-              <Button style={btnStyle} type="submit">
+              <Button className="btnStyle" type="submit">
                 Submit
               </Button>
               <Form.Group
-                className="mb-1 mt-3 text-white"
+                className=" mt-3 text-white text-center fs-5"
                 controlId="formBasicCheckbox"
               >
-                <Form.Label label={msg}>{msg}</Form.Label>
+                <Form.Label label={msg}>
+                  {msg} Email Sent Successfully!
+                </Form.Label>
               </Form.Group>
             </Form>
             {/* <ToastContainer /> */}
