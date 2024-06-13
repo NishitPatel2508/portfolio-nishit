@@ -193,9 +193,7 @@ const Contact = () => {
                 className=" mt-3 text-white text-center fs-5"
                 controlId="formBasicCheckbox"
               >
-                <Form.Label label={msg}>
-                  {msg} Email Sent Successfully!
-                </Form.Label>
+                <Form.Label label={msg}>{msg}</Form.Label>
               </Form.Group>
             </Form>
             {/* <ToastContainer /> */}
