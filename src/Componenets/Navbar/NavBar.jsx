@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Navbar.css";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -7,6 +7,22 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 const NavBar = () => {
+  // const navButton = useRef(null);
+  // const linksContainerRef = useRef(null);
+  // function collapseNav(e) {
+  //   console.log(navButton);
+  //   console.log(linksContainerRef);
+  //   navButton.current.classList.add("collapsed");
+  //   body.style.overflow = "hidden";
+  //   navButton.current.classList.remove("collapsed");
+  //   linksContainerRef.current.classList.remove("show");
+  //   window.addEventListener("click", (e) => {
+  //     console.log(e.target !== linksContainerRef.current);
+  //   if (e.target !== linksContainerRef.current) {
+  //     linksContainerRef.current.style.display = "none";
+  //   }
+  //   });
+  // }
   const btnStyle = {
     cursor: "pointer",
     padding: "5px 20px",
@@ -36,9 +52,14 @@ const NavBar = () => {
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              // ref={linksContainerRef}
+              // style={{ display: "block" }}
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                  //
+                >
                   NISHIT
                 </Offcanvas.Title>
               </Offcanvas.Header>

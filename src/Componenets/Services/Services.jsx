@@ -24,7 +24,7 @@ const Services = () => {
                   xs={12}
                   md={6}
                   lg={4}
-                  className="mt-3 d-flex justify-content-center"
+                  className="mt-3 d-flex justify-content-center "
                 >
                   <Card
                     bg="dark"
@@ -35,14 +35,14 @@ const Services = () => {
                       height: "max-content",
                       padding: "5px",
                     }}
-                    className="mb-2 "
+                    className="mb-2 h-auto d-inline-block"
                   >
                     <Card.Header>{item.s_no}</Card.Header>
                     <Card.Body>
                       <Card.Title className="service-card-title">
                         {item.s_name}
                       </Card.Title>
-                      <Card.Text className="service-card-desc">
+                      <Card.Text className="service-card-desc fs-5">
                         {item.s_desc}
                       </Card.Text>
                     </Card.Body>

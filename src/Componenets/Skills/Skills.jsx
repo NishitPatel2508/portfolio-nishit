@@ -10,7 +10,7 @@ import { skills_data } from "../../data/skills_data";
 const Skills = () => {
   return (
     <section id="skills" className="d-flex">
-      <Container className=" mb-5">
+      <Container className=" mb-5 mt-2">
         {" "}
         <Stack gap={4}>
           <Row>
@@ -37,20 +37,20 @@ const Skills = () => {
                       text="light"
                       style={{
                         width: "22rem",
-                        height: "32rem",
-                        padding: "5px 12px",
+                        height: "fit-content",
+                        padding: "8px 12px",
                       }}
-                      //   className="mb-2"
+                      className="h-auto d-inline-block"
                     >
                       <Card.Header
                         className="card-header d-flex justify-content-center align-items-center"
-                        style={{ height: "6rem" }}
+                        style={{ height: "3.5rem" }}
                       >
                         {item.title}
                       </Card.Header>
                       {item.data.map((i) => {
                         return (
-                          <div className="skill-info mt-3">
+                          <div className="skill-info mt-1 mb-3">
                             <p>{i.skill}</p>
                             {/* <div className="mt-1"> */}
                             <ProgressBar
