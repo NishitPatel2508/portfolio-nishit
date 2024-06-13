@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio-nishit/static/css/main.de77d3b4.css",
-    "main.js": "/portfolio-nishit/static/js/main.cf5483d5.js",
+    "main.css": "/portfolio-nishit/static/css/main.e37681eb.css",
+    "main.js": "/portfolio-nishit/static/js/main.55fc6fc2.js",
     "static/js/453.1407b060.chunk.js": "/portfolio-nishit/static/js/453.1407b060.chunk.js",
     "static/media/t1.png": "/portfolio-nishit/static/media/t1.0615b4b0b24f708c84d6.png",
     "static/media/profile_nishit.jpeg": "/portfolio-nishit/static/media/profile_nishit.4e839ea4fff4dfca9b51.jpeg",
     "static/media/Nishit_Resume.pdf": "/portfolio-nishit/static/media/Nishit_Resume.85ef3aa05032c15e0c19.pdf",
     "static/media/brainwave.png": "/portfolio-nishit/static/media/brainwave.500fad4646bb40531cfa.png",
     "index.html": "/portfolio-nishit/index.html",
-    "main.de77d3b4.css.map": "/portfolio-nishit/static/css/main.de77d3b4.css.map",
-    "main.cf5483d5.js.map": "/portfolio-nishit/static/js/main.cf5483d5.js.map",
+    "main.e37681eb.css.map": "/portfolio-nishit/static/css/main.e37681eb.css.map",
+    "main.55fc6fc2.js.map": "/portfolio-nishit/static/js/main.55fc6fc2.js.map",
     "453.1407b060.chunk.js.map": "/portfolio-nishit/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de77d3b4.css",
-    "static/js/main.cf5483d5.js"
+    "static/css/main.e37681eb.css",
+    "static/js/main.55fc6fc2.js"
   ]
 }
