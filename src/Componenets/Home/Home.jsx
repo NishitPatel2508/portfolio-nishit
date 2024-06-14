@@ -7,6 +7,7 @@ import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import profile_nishit from "../../assets/profile_nishit.jpeg";
 import Nishit_Resume from "../../Files/Nishit_Resume.pdf";
+import { Element } from "react-scroll";
 const Home = () => {
   // const btnStyle = {
   //   cursor: "pointer",
@@ -31,8 +32,10 @@ const Home = () => {
   //   textAlign: "center",
   // };
   return (
+    // <Element name="home" className="element">
     <section
       id="home"
+      // id="hero"
       className="d-flex justify-content-center align-items-center p-5"
     >
       <Container className="d-flex mt-5">
@@ -68,7 +71,7 @@ const Home = () => {
             <Col xs={12} md={12} lg={12} className="btnStyles gap-3">
               {/* <Stack direction="horizontal" gap={3}> */}
               <Button
-                className="btnConnectStyle   ps-3 pe-3 text-center"
+                className="btnConnectStyle ps-3 pe-3 text-center"
                 href="#contact"
               >
                 <a style={{ textDecoration: "none", color: "white" }}>
@@ -92,6 +95,7 @@ const Home = () => {
         </Stack>
       </Container>
     </section>
+    // </Element>
   );
 };
 

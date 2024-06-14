@@ -1,0 +1,30 @@
+.navBtn{
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    border: 2px solid #DA7C25;
+}
+.navBtn:hover{
+    border-radius: 2px solid #B923E1;
+}
+
+.navmenu:hover{
+    color: #0ef;
+}
+/* .element {
+    height: 1000px;
+    background-color: #ededed;
+    font-size: 45px;
+    border-top: 1px solid #000;
+    padding-top: 55px;
+    padding-left: 10px;
+  } */
+  
+  .element.no-padding {
+    padding-top: 0;
+  }
+  
+  .active {
+    color: #0ef !important;
+    border-bottom: 2px solid #0ef;
+    /* text-decoration-line: underline #0ef !important; */
+  }

@@ -86,7 +86,7 @@ const Contact = () => {
               </Col>
             </Row>
             <Row className="text-white ">
-              <Col md={12} className="d-flex gap-2 ">
+              <Col md={12} className="d-flex gap-3 ">
                 <p style={{ fontSize: "16px", cursor: "pointer" }}>
                   <MdEmail className="iconStyle" />
                 </p>

@@ -2,3 +2,28 @@
     background: #161513;
     height: max-content;
 }
+.linkedin:hover{
+    color: #0a66c2;
+    /* background: #fff; */
+    border: none;
+    font-size: 25px;
+}
+.git:hover{
+    border: none;
+    font-size: 25px;
+    background-color:#03001c;
+    /* background-color: #eeee; */
+    object-fit: cover;
+}
+.insta:hover{
+    border: none;
+    font-size: 25px;
+    color:#F56040;
+    /* background-color: #eeee; */
+    object-fit: cover;
+}
+.x:hover{
+    border: none;
+    font-size: 25px;
+   
+}
