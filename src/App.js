@@ -7,18 +7,20 @@ import Skills from './Componenets/Skills/Skills';
 import Projects from './Componenets/Projects/Projects';
 import Contact from './Componenets/Contact/Contact';
 import Footer from './Componenets/Footer/Footer';
+import GoToTop from './Componenets/GoToTop/GoToTop';
 
 function App() {
   return (
     <>
         <NavBar/>
-        <Home/>
+        <Home />
         <AboutMe/>
         <Services/>
         <Skills/>
         <Projects/>
         <Contact/>
-        <Footer/>
+        <GoToTop/>
+
     </>
   );
 }

@@ -23,11 +23,11 @@ const Footer = () => {
           <Col md={3} className="d-flex justify-content-center gap-4 mb-4">
             <a
               href="https://www.linkedin.com/in/nishit-patel-6650b1188/"
-              className="fs-5"
+              className="fs-5 "
               style={{ color: "white", textDecoration: "none" }}
               target="_blank"
             >
-              <FaLinkedin />
+              <FaLinkedin className="linkedin" />
             </a>
             <a
               href="https://github.com/NishitPatel2508/"
@@ -35,7 +35,7 @@ const Footer = () => {
               style={{ color: "white", textDecoration: "none" }}
               target="_blank"
             >
-              <FaGithub />
+              <FaGithub className="git" />
             </a>
             <a
               href="https://www.instagram.com/nishit_patel_25_08/"
@@ -43,7 +43,7 @@ const Footer = () => {
               style={{ color: "white", textDecoration: "none" }}
               target="_blank"
             >
-              <BsInstagram />
+              <BsInstagram className="insta" />
             </a>
             <a
               href="https://twitter.com/home"
@@ -51,7 +51,7 @@ const Footer = () => {
               style={{ color: "white", textDecoration: "none" }}
               target="_blank"
             >
-              <FaXTwitter />
+              <FaXTwitter className="x" />
             </a>
             {/* <p>Terms of Services</p>
             <p>Connect with Me</p> */}
