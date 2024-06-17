@@ -48,7 +48,7 @@ const NavBar = () => {
                     NISHIT
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body className="d-flex flex-column flex-lg-row  justify-content-center">
+                <Offcanvas.Body className="d-flex flex-column flex-md-row  justify-content-center">
                   <Nav
                     className="justify-content-center align-items-center flex-grow-1 pe-4 fw-600 "
                     style={{ fontSize: "17px" }}
@@ -142,6 +142,7 @@ const NavBar = () => {
                     <Button
                       className="navBtn ps-3 pe-3 text-center"
                       href="#contact"
+                      onClick={handleClose}
                     >
                       Contact With Me
                     </Button>
