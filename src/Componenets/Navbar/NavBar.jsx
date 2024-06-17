@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -6,45 +6,13 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 const NavBar = () => {
-  // const navButton = useRef(null);
-  // const linksContainerRef = useRef(null);
-  // function collapseNav(e) {
-  //   console.log(navButton);
-  //   console.log(linksContainerRef);
-  //   navButton.current.classList.add("collapsed");
-  //   body.style.overflow = "hidden";
-  //   navButton.current.classList.remove("collapsed");
-  //   linksContainerRef.current.classList.remove("show");
-  //   window.addEventListener("click", (e) => {
-  //     console.log(e.target !== linksContainerRef.current);
-  //   if (e.target !== linksContainerRef.current) {
-  //     linksContainerRef.current.style.display = "none";
-  //   }
-  //   });
-  // }
-  // "#sec".scrollspy({ target: "#navbar-example" });
+  const [show, setShow] = useState(false);
 
-  const btnStyle = {
-    cursor: "pointer",
-    padding: "5px 20px",
-    borderRadius: "50px",
-    background: "linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%)",
-    color: "white",
-    fontSize: "17px",
-    fontWeight: "400",
-    border: "1px solid #DA7C25",
-    textAlign: "center",
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <section id="navbar">
@@ -63,13 +31,14 @@ const NavBar = () => {
               <Navbar.Brand href="#">NISHIT</Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
+                onClick={handleShow}
               />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="end"
-                // ref={linksContainerRef}
-                // style={{ display: "block" }}
+                show={show}
+                onHide={handleClose}
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title
@@ -79,8 +48,11 @@ const NavBar = () => {
                     NISHIT
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
-                  <Nav className="justify-content-center flex-grow-1 pe-4 fw-600 ">
+                <Offcanvas.Body className="d-flex flex-column flex-lg-row  justify-content-center">
+                  <Nav
+                    className="justify-content-center align-items-center flex-grow-1 pe-4 fw-600 "
+                    style={{ fontSize: "17px" }}
+                  >
                     <Nav.Link className="pe-4 navmenu ">
                       <Link
                         activeClass="active"
@@ -90,6 +62,7 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
                         Home
                       </Link>
@@ -103,6 +76,7 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
                         About Me
                       </Link>
@@ -116,6 +90,7 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
                         Services
                       </Link>
@@ -129,8 +104,9 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
-                        Skill
+                        Skills
                       </Link>
                     </Nav.Link>
                     <Nav.Link className="pe-4 navmenu">
@@ -142,6 +118,7 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
                         Projects
                       </Link>
@@ -155,30 +132,16 @@ const NavBar = () => {
                         smooth={true}
                         duration={500}
                         style={{ textDecoration: "none", color: "inherit" }}
+                        onClick={handleClose}
                       >
                         Contact
                       </Link>
                     </Nav.Link>
                   </Nav>
-                  <Form className="d-flex">
-                    {/* <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  /> */}
+                  <Form className="d-flex flex-column  flex-lg-row align-items-center justify-content-center ">
                     <Button
                       className="navBtn ps-3 pe-3 text-center"
                       href="#contact"
-                      // variant="success"
-                      // style={btnStyle}
-                      // style={{
-                      //   textDecoration: "none",
-                      //   color: "#ffff",
-                      //   background:
-                      //     "linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%)",
-                      //   borderRadius: "50px",
-                      // }}
                     >
                       Contact With Me
                     </Button>
