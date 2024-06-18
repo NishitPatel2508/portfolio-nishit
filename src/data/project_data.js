@@ -66,7 +66,7 @@ export const project_data = [    {
     image: `${brainwave}`,
     category:"Fullstack",
     data:{
-      description: `OLPSD aims to bridge this gap by offering a comprehensive solution that leverages 
+      description: `This website is not hosted. OLPSD aims to bridge this gap by offering a comprehensive solution that leverages 
       technology to provide interactive, personalized, and engaging learning experiences 
       across various domains..`,
       demoLink: "https://google.com/",

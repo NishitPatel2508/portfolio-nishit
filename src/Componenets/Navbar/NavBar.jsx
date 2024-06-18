@@ -60,7 +60,7 @@ const NavBar = () => {
                         to="home"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >
@@ -74,7 +74,7 @@ const NavBar = () => {
                         to="about"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >
@@ -88,7 +88,7 @@ const NavBar = () => {
                         to="services"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >
@@ -102,7 +102,7 @@ const NavBar = () => {
                         to="skills"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >
@@ -116,7 +116,7 @@ const NavBar = () => {
                         to="projects"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >
@@ -130,7 +130,7 @@ const NavBar = () => {
                         to="contact"
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
                         onClick={handleClose}
                       >

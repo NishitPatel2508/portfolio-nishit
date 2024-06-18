@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Skills.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,7 +7,31 @@ import Stack from "react-bootstrap/Stack";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Card from "react-bootstrap/Card";
 import { skills_data } from "../../data/skills_data";
+import ProgressLine from "./ProgressLine";
 const Skills = () => {
+  const visualParts = [
+    {
+      percentage: "0%",
+      color: "white",
+    },
+  ];
+  const [widths, setWidths] = useState(
+    visualParts.map(() => {
+      return 0;
+    })
+  );
+  useEffect(() => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+    // You need to wrap it to trigger the animation
+    requestAnimationFrame(() => {
+      // Set a new array of percentage widths based on the props
+      setWidths(
+        visualParts.map((item) => {
+          return item.percentage;
+        })
+      );
+    });
+  }, [visualParts]);
   return (
     <section id="skills" className="d-flex">
       <Container className=" mb-5 mt-2">
@@ -33,14 +57,14 @@ const Skills = () => {
                   >
                     <Card
                       bg="dark"
-                      border="secondary"
+                      // border="secondary"
                       text="light"
                       style={{
                         width: "22rem",
                         height: "fit-content",
                         padding: "8px 12px",
                       }}
-                      className="h-auto d-inline-block"
+                      className="h-auto d-inline-block skill-card"
                     >
                       <Card.Header
                         className="card-header d-flex justify-content-center align-items-center"
@@ -58,8 +82,19 @@ const Skills = () => {
                               variant="danger"
                               now={i.rank}
                               label={`${i.rank}%`}
-                              style={{ color: "#B923E1" }}
+                              // style={{ color: "#B923E1" }}
+                              className="progressVisualPart"
                             />
+                            {/* <ProgressLine
+                              label={`${i.skill}`}
+                              backgroundColor="lightgrey"
+                              visualParts={[
+                                {
+                                  percentage: `${i.rank}%`,
+                                  color: "blue",
+                                },
+                              ]}
+                            /> */}
                             {/* </div> */}
                           </div>
                         );

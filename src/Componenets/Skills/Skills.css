@@ -1,6 +1,6 @@
 #skills{
     background: #161513;
-    height: max-content;
+    height: 100vh;
 }
 .skill-info p{
     color: #ffff;
@@ -13,3 +13,22 @@
     text-align: center;
     color: #DA7C25;
 }
+/* .progressVisualPart{
+    background-color:aqua;
+} */
+/* .progressVisualPart:hover{
+    height: 1.5rem;
+    color: #DA7C25;
+    background: linear-gradient(0deg, rgba(195,34,56,1) 0%, rgba(245,86,42,1) 100%);
+    background-clip: color;
+    -webkit-background-clip: color;
+    
+} */
+.skill-card{
+  border: 1px solid #ececec;
+}
+.skill-card:hover{
+    border: 3px solid #DA7C25;
+}
+
+  

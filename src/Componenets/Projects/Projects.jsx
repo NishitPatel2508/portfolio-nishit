@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -13,6 +13,7 @@ import Card from "react-bootstrap/Card";
 import { project_data } from "../../data/project_data";
 const tabs = [{ name: "All" }, { name: "Frontend" }, { name: "Fullstack" }];
 const Projects = () => {
+  const [load, setLoad] = useState(false);
   const [displayAbleProjects, setDisplayAbleProjects] = useState(project_data);
   const setProjects = (category) => {
     if (category === "All") {
@@ -28,6 +29,12 @@ const Projects = () => {
     // console.log(link);
     window.open(link, "_blank");
   };
+  useEffect(() => {
+    setLoad(true);
+    setTimeout(() => {
+      setLoad(false);
+    }, 600);
+  }, [displayAbleProjects]);
   return (
     <section id="projects" className="d-flex justify-content-center  ">
       <Container className="mb-5">
@@ -84,7 +91,9 @@ const Projects = () => {
                                     color: "white",
                                   }}
                                   bg="dark"
-                                  className="bg-dark"
+                                  className={`bg-dark h-auto d-inline-block project_item ${
+                                    load ? "zoom_in" : ""
+                                  }`}
                                   border="secondary"
                                 >
                                   <Card.Img
@@ -109,7 +118,7 @@ const Projects = () => {
                                       <div
                                         style={{
                                           marginTop: "9px",
-                                          height: "8rem",
+                                          height: "9rem",
                                           //   border: "2px solid white",
                                         }}
                                       >
