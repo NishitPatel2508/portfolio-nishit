@@ -8,35 +8,41 @@ import Button from "react-bootstrap/Button";
 import profile_nishit from "../../assets/profile_nishit.jpeg";
 import Nishit_Resume from "../../Files/Nishit_Resume.pdf";
 import { Element } from "react-scroll";
+import { motion } from "framer-motion";
+const textVariant = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transitioin: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+const sliderVariant = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+
+    transitioin: {
+      repeat: Infinity,
+      duration: 20,
+    },
+  },
+};
 const Home = () => {
-  // const btnStyle = {
-  //   cursor: "pointer",
-  //   padding: "12px 25px",
-  //   borderRadius: "50px",
-  //   background: "linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%)",
-  //   color: "white",
-  //   fontSize: "1px",
-  //   fontWeight: "500",
-  //   border: "1px solid #DA7C25 ",
-  //   textAlign: "center",
-  // };
-  // const btnResumeStyle = {
-  //   cursor: "pointer",
-  //   padding: "10px 25px",
-  //   borderRadius: "50px",
-  //   color: "white",
-  //   fontSize: "17px",
-  //   fontWeight: "500",
-  //   border: "1px solid white",
-  //   background: "transparent",
-  //   textAlign: "center",
-  // };
   return (
     // <Element name="home" className="element">
     <section
       id="home"
       // id="hero"
-      className="d-flex justify-content-center align-items-center p-5"
+      className="hero d-flex justify-content-center align-items-center p-5"
     >
       <Container className="d-flex mt-5">
         <Stack gap={4}>
@@ -49,7 +55,7 @@ const Home = () => {
               <img src={profile_nishit} alt="" className="mainImg mt-4" />
             </Col>
           </Row>
-          <Row className="mt-2">
+          <Row className="mt-2" variant={textVariant}>
             <Col
               xs={12}
               md={12}
@@ -92,6 +98,14 @@ const Home = () => {
               </Button>
             </Col>
           </Row>
+          {/* <motion.div
+            className="slidingTextContainer"
+            variant={sliderVariant}
+            initial="initial"
+            animate="animate"
+          >
+            Frontend Development
+          </motion.div> */}
         </Stack>
       </Container>
     </section>

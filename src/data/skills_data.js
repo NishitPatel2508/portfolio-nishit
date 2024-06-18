@@ -54,11 +54,7 @@ export const skills_data = [
                 level:"Experienced",
                 rank:60,
             },
-            {
-                skill:"MangoDB",
-                level:"Intermediate",
-                rank:65,
-            },
+
             {
                 skill:"Python",
                 level:"Intermediate",
@@ -81,7 +77,7 @@ export const skills_data = [
                 rank:65,
             },
             {
-                skill:"MangoDB",
+                skill:"MongoDB",
                 level:"Intermediate",
                 rank:65,
             },

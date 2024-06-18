@@ -1,6 +1,6 @@
 #contact{
     background: #161513;
-    height: max-content;
+    height: 100vh;
 }
 .contact-title{
     font-size: 40px;
@@ -40,11 +40,20 @@
     text-align: center;
 }
 @media (max-width:768px){
+    #contact{
+        height: max-content;
+    }
     .btnStyle {
         padding: 6px 25px;
         width: 100%;
         font-size: 20px;
         font-weight: 500;
+    }
+
+}
+@media (max-width:1024px){
+    #contact{
+        height: max-content;
     }
 
 }

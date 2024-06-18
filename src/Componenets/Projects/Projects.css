@@ -36,3 +36,18 @@
 .stack-name{
     padding-left: 5px;
 }
+.project_item {
+    transition: var(--transition);
+}
+.project_item .zoom_in{
+    animation: zoomIn 600ms ease;
+}
+
+@keyframes zoomIn{
+    0%{
+        scale: 0.5;
+    }
+    100%{
+        scale: 1;
+    }
+}

@@ -33,7 +33,7 @@ const AboutMe = () => {
                 <p>
                   My passion for MERN Stack development is not only reflected in
                   my extensive projects but also in the enthusiasm and
-                  dedication I bring to each project..
+                  dedication I bring to each project.
                 </p>
               </Stack>
             </Col>

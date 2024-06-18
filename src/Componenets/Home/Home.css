@@ -1,11 +1,20 @@
 #home{
     background: #161513;
-    height: max-content;
+    height: calc(100vh-100px);
+    overflow: hidden;
     /* display: flex;
     justify-content: center;
     align-items: center; */
     /* margin-top: 10px; */
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 20vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #ffffff09;
+    }
 }
+
 .mainImg{
     height: 200px;
     width: 200px;
@@ -53,6 +62,7 @@
     font-size: 17px;
     font-weight: 500;
 }
+
 @media (max-width:768px){
     .btnStyles{
         display: flex;
