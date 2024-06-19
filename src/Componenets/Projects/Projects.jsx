@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Projects.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,10 +7,16 @@ import Stack from "react-bootstrap/Stack";
 import Nav from "react-bootstrap/Nav";
 import Accordion from "react-bootstrap/Accordion";
 import { CiShare1 } from "react-icons/ci";
-
 import Card from "react-bootstrap/Card";
-
 import { project_data } from "../../data/project_data";
+import {
+  AnimatePresence,
+  motion,
+  useAnimation,
+  useInView,
+} from "framer-motion";
+import Reveal from "../Global/Animation/Reveal";
+
 const tabs = [{ name: "All" }, { name: "Frontend" }, { name: "Fullstack" }];
 const Projects = () => {
   const [load, setLoad] = useState(false);
@@ -35,8 +41,22 @@ const Projects = () => {
       setLoad(false);
     }, 600);
   }, [displayAbleProjects]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+
+  useEffect(() => {
+    console.log(isInView);
+    if (isInView) {
+      mainControls.start("visible");
+      slideControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <section id="projects" className="d-flex justify-content-center  ">
+      {/* <SectionAnimationOnScroll> */}
       <Container className="mb-5">
         {" "}
         <Stack gap={4}>
@@ -68,7 +88,7 @@ const Projects = () => {
                               }}
                               className="tabName"
                             >
-                              {tab.name}
+                              <motion.div>{tab.name}</motion.div>
                             </Nav.Link>
                           </Nav.Item>
                         );
@@ -82,105 +102,166 @@ const Projects = () => {
                           return (
                             <>
                               <Col xs={12} md={6} lg={4}>
-                                <Card
-                                  style={{
-                                    height: "max-content",
-                                    // width: "18rem",
-                                    // overflow: "hidden",
-                                    marginTop: "1rem",
-                                    color: "white",
-                                  }}
-                                  bg="dark"
-                                  className={`bg-dark h-auto d-inline-block project_item ${
-                                    load ? "zoom_in" : ""
-                                  }`}
-                                  border="secondary"
-                                >
-                                  <Card.Img
-                                    variant="top"
-                                    src={project.image}
-                                    className="project-img"
-                                  />
-                                  <Card.Body>
-                                    <div
-                                      style={{
-                                        marginTop: "2px",
-                                        height: "4rem",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "start",
-                                        // border: "2px solid white",
-                                      }}
-                                    >
-                                      <Card.Title>{project.title}</Card.Title>
-                                    </div>
-                                    <Card.Text>
-                                      <div
-                                        style={{
-                                          marginTop: "9px",
-                                          height: "9rem",
-                                          //   border: "2px solid white",
+                                {/* <AnimatePresence> */}
+                                <div ref={ref}>
+                                  <motion.div
+                                    key={
+                                      displayAbleProjects
+                                        ? displayAbleProjects.catrgory
+                                        : "All"
+                                    }
+                                    initial={{ y: 10, opacity: 0, scale: 0 }}
+                                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                                    exit={{ y: -10, opacity: 0 }}
+                                    transition={{ duration: 2 }}
+                                    whileInView={{
+                                      scale: 1,
+                                    }}
+                                    whileHover={{ scale: [1, 1.1, 1] }}
+                                  >
+                                    {/* <motion.div
+                                        // key={
+                                        //   displayAbleProjects
+                                        //     ? displayAbleProjects.catrgory
+                                        //     : "All"
+                                        // }
+                                        initial={{
+                                          y: 10,
+                                          opacity: 0,
+                                          scale: 0,
                                         }}
-                                      >
-                                        {project.data.description}
-                                      </div>
-                                    </Card.Text>
-                                  </Card.Body>
-                                  <Card.Body>
-                                    <Accordion
-                                      defaultActiveKey="0"
-                                      //   className="bg-dark"
+                                        animate={{
+                                          scale: 1,
+                                          y: 0,
+                                          opacity: 1,
+                                          ease: "easeIn",
+                                        }}
+                                        // exit={{ y: 0, opacity: 0, scale: 0 }}
+                                        transition={{ duration: 1 }}
+                                        whileInView={{ scale: 1, opacity: 1 }}
+                                     
+                                      > */}
+                                    <Card
+                                      style={{
+                                        height: "max-content",
+                                        // width: "18rem",
+                                        // overflow: "hidden",
+                                        marginTop: "1rem",
+                                        color: "white",
+                                        // scale: 1,
+                                      }}
+                                      bg="dark"
+                                      className={`bg-dark h-auto d-inline-block project_item `}
+                                      border="secondary"
+                                      initial={{
+                                        y: 10,
+                                        opacity: 0,
+                                        scale: 0,
+                                      }}
+                                      animate={{
+                                        scale: 1,
+                                        y: 0,
+                                        opacity: 1,
+                                        ease: "easeIn",
+                                      }}
+                                      // exit={{ y: 0, opacity: 0, scale: 0 }}
+                                      transition={{ duration: 1 }}
+                                      whileInView={{ scale: 1, opacity: 1 }}
                                     >
-                                      <Accordion.Item eventKey="1">
-                                        <Accordion.Header>
-                                          <CiShare1
+                                      <Card.Img
+                                        variant="top"
+                                        src={project.image}
+                                        className="project-img"
+                                      />
+                                      <Card.Body>
+                                        <div
+                                          style={{
+                                            marginTop: "2px",
+                                            height: "4rem",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "start",
+                                            // border: "2px solid white",
+                                          }}
+                                        >
+                                          <Card.Title>
+                                            {project.title}
+                                          </Card.Title>
+                                        </div>
+                                        <Card.Text>
+                                          <div
                                             style={{
-                                              fontSize: "23px",
-                                              color: "black",
-                                              fontWeight: 500,
-                                              cursor: "pointer",
-                                            }}
-                                            onClick={() =>
-                                              handleLinkOpen(
-                                                project.data.demoLink
-                                              )
-                                            }
-                                          />
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                          <span
-                                            style={{
-                                              fontSize: "18px",
-                                              color: "black",
-                                              fontWeight: "bolder",
-                                              textAlign: "center",
+                                              marginTop: "9px",
+                                              height: "9rem",
+                                              //   border: "2px solid white",
                                             }}
                                           >
-                                            Stack used
-                                          </span>
-                                          {project.stack.map((list, index) => {
-                                            return (
-                                              <div className="items">
-                                                <span
-                                                  className="stack-icon "
-                                                  style={{
-                                                    color: list.iconColor,
-                                                    fontWeight: "600",
-                                                  }}
-                                                >
-                                                  {list.icon}
-                                                  <span className="stack-name">
-                                                    {list.name}
-                                                  </span>
-                                                </span>
-                                              </div>
-                                            );
-                                          })}
-                                        </Accordion.Body>
-                                      </Accordion.Item>
-                                    </Accordion>
-                                  </Card.Body>
-                                </Card>
+                                            {project.data.description}
+                                          </div>
+                                        </Card.Text>
+                                      </Card.Body>
+                                      <Card.Body>
+                                        <Accordion
+                                          defaultActiveKey="0"
+                                          //   className="bg-dark"
+                                        >
+                                          <Accordion.Item eventKey="1">
+                                            <Accordion.Header>
+                                              <CiShare1
+                                                style={{
+                                                  fontSize: "23px",
+                                                  color: "black",
+                                                  fontWeight: 500,
+                                                  cursor: "pointer",
+                                                }}
+                                                onClick={() =>
+                                                  handleLinkOpen(
+                                                    project.data.demoLink
+                                                  )
+                                                }
+                                              />
+                                            </Accordion.Header>
+                                            <Accordion.Body>
+                                              <span
+                                                style={{
+                                                  fontSize: "18px",
+                                                  color: "black",
+                                                  fontWeight: "bolder",
+                                                  textAlign: "center",
+                                                }}
+                                              >
+                                                Stack used
+                                              </span>
+                                              {project.stack.map(
+                                                (list, index) => {
+                                                  return (
+                                                    <div className="items">
+                                                      <span
+                                                        className="stack-icon "
+                                                        style={{
+                                                          color: list.iconColor,
+                                                          fontWeight: "600",
+                                                        }}
+                                                      >
+                                                        {list.icon}
+                                                        <span className="stack-name">
+                                                          {list.name}
+                                                        </span>
+                                                      </span>
+                                                    </div>
+                                                  );
+                                                }
+                                              )}
+                                            </Accordion.Body>
+                                          </Accordion.Item>
+                                        </Accordion>
+                                      </Card.Body>
+                                    </Card>
+                                    {/* </motion.div> */}
+                                  </motion.div>
+                                </div>
+
+                                {/* </AnimatePresence> */}
                               </Col>
                             </>
                           );
@@ -192,7 +273,21 @@ const Projects = () => {
             </Col>
           </Row>
         </Stack>
+        {/* <main>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={displayAbleProjects ? displayAbleProjects.catrgory : "All"}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 20, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {displayAbleProjects.catrgory}
+            </motion.div>
+          </AnimatePresence>
+        </main> */}
       </Container>
+      {/* </SectionAnimationOnScroll> */}
     </section>
   );
 };

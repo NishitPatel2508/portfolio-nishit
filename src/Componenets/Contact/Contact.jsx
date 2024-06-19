@@ -3,13 +3,14 @@ import "./Contact.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Stack from "react-bootstrap/Stack";
 import { MdEmail } from "react-icons/md";
 import { IoCallSharp } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { ToastContainer, toast } from "react-toastify";
+// import SectionAnimationOnScroll from "../Global/Animation/SectionAnimationOnScroll";
+// import Reveal from "../Global/Animation/Reveal";
 
 const Contact = () => {
   const [msg, setMsg] = useState("");

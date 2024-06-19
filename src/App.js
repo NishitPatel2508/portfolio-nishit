@@ -9,40 +9,27 @@ import Contact from './Componenets/Contact/Contact';
 import Footer from './Componenets/Footer/Footer';
 import GoToTop from './Componenets/GoToTop/GoToTop';
 import "./App.css"
+// import Reveal from './Componenets/Global/Reveal';
+
+
 function App() {
+
   return (
     <>
-    
-        <NavBar/>
-      
-    
-        <Home />
-      
-    
-        <AboutMe/>
-      
-    
-        <Services/>
-      
-    
-        <Skills/>
-      
-    
-        <Projects/>
-      
-    
-      <Contact/>
-      
-    
-      <GoToTop/>
-      
-    
-      <Footer/>
-      
 
-   
+
+        <NavBar/>
+        <Home />
      
-   
+        <AboutMe/>
+        <Services/>
+  
+        <Skills/>
+        <Projects/>
+        <Contact/>
+        <GoToTop/>
+        <Footer/>
+  
     </>
   );
 }

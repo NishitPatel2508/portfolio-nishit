@@ -95,7 +95,7 @@ const NavBar = () => {
                         Services
                       </Link>
                     </Nav.Link>
-                    <Nav.Link href="#DA7C25" className="pe-4 navmenu">
+                    <Nav.Link className="pe-4 navmenu">
                       <Link
                         activeClass="active"
                         className="skills"
