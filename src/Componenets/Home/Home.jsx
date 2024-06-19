@@ -55,22 +55,35 @@ const Home = () => {
               <img src={profile_nishit} alt="" className="mainImg mt-4" />
             </Col>
           </Row>
-          <Row className="mt-2" variant={textVariant}>
+          <Row className="mt-2">
             <Col
               xs={12}
               md={12}
               lg={12}
               className="d-flex justify-content-center align-items-center"
             >
-              <h1 className="home-text">
+              <motion.div
+                className="home-text"
+                // variant={textVariant}
+                initial={{ x: -300, scale: 0.5 }}
+                animate={{ x: 0, scale: 1 }}
+                transition={{ duration: 1 }}
+                whileInView={{ x: 0, scale: 1 }}
+              >
                 <span>I'm Nishit Patel,</span> MERN Stack Developer based in
                 India
-              </h1>
+              </motion.div>
             </Col>
           </Row>
           <Row className="mt-2 d-flex">
             <Col className="home-text2 d-flex justify-content-center">
-              <p>I am fresher with the strong foundation in MERN.</p>
+              <motion.div
+                initial={{ x: 300, scale: 0.5 }}
+                animate={{ x: 0, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
+                I am fresher with the strong foundation in MERN.
+              </motion.div>
             </Col>
           </Row>
           <Row className="mt-2 d-flex justify-content-center">
@@ -87,7 +100,7 @@ const Home = () => {
               <Button
                 className="btnResumeStyle "
                 href={Nishit_Resume}
-                download="My_File.pdf"
+                download="NishitPatelResume.pdf"
               >
                 {/* My Resume */}
                 {/* <Link to="/files/Nishit_Resume.pdf" target="_blank" download> */}{" "}
