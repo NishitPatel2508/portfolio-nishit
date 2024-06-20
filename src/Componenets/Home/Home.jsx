@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Home.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,7 +8,9 @@ import Button from "react-bootstrap/Button";
 import profile_nishit from "../../assets/profile_nishit.jpeg";
 import Nishit_Resume from "../../Files/Nishit_Resume.pdf";
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
+import { animate, motion, useInView } from "framer-motion";
+import AnimatedText from "../Global/Animation/AnimatedText";
+
 const textVariant = {
   initial: {
     x: -500,
@@ -36,7 +38,11 @@ const sliderVariant = {
     },
   },
 };
+
 const Home = () => {
+  const txt = "I'm Nishit Patel,MERN Stack Developer based in India";
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.5 });
   return (
     // <Element name="home" className="element">
     <section
@@ -62,25 +68,27 @@ const Home = () => {
               lg={12}
               className="d-flex justify-content-center align-items-center"
             >
-              <motion.div
+              {/* <motion.div
                 className="home-text"
                 // variant={textVariant}
                 initial={{ x: -300, scale: 0.5 }}
                 animate={{ x: 0, scale: 1 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, scale: 1 }}
-              >
-                <span>I'm Nishit Patel,</span> MERN Stack Developer based in
-                India
-              </motion.div>
+                aria-hidden
+              > */}
+
+              <AnimatedText txt={txt} className="home-text" />
+              {/* </motion.div> */}
             </Col>
           </Row>
           <Row className="mt-2 d-flex">
             <Col className="home-text2 d-flex justify-content-center">
               <motion.div
-                initial={{ x: 300, scale: 0.5 }}
-                animate={{ x: 0, scale: 1 }}
+                initial={{ x: 300, scale: 0.5, opacity: 0 }}
+                animate={{ x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 1 }}
+                whileInView={{ scale: 1, opacity: 1, y: 0 }}
               >
                 I am fresher with the strong foundation in MERN.
               </motion.div>
@@ -89,14 +97,21 @@ const Home = () => {
           <Row className="mt-2 d-flex justify-content-center">
             <Col xs={12} md={12} lg={12} className="btnStyles gap-3">
               {/* <Stack direction="horizontal" gap={3}> */}
+
               <Button
                 className="btnConnectStyle ps-3 pe-3 text-center"
                 href="#contact"
               >
+                {/* <AnimatedText
+                  el="a"
+                  txt="Connect with me"
+                  style={{ textDecoration: "none", color: "white" }}
+                /> */}
                 <a style={{ textDecoration: "none", color: "white" }}>
                   Connect with me
                 </a>
               </Button>
+
               <Button
                 className="btnResumeStyle "
                 href={Nishit_Resume}

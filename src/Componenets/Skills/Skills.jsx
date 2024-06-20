@@ -37,6 +37,21 @@ const Skills = () => {
     });
   }, [visualParts]);
 
+  //Framer Motion
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transitioin: {
+        delay: 0.05 * index,
+      },
+    }),
+  };
+
   return (
     <>
       <section id="skills" className="d-flex">
@@ -79,12 +94,20 @@ const Skills = () => {
                         >
                           {item.title}
                         </Card.Header>
-                        <Reveal>
-                          {item.data.map((i) => {
-                            return (
-                              <div className="skill-info mt-1 mb-3">
-                                <p>{i.skill}</p>
-                                {/* <div className="mt-1"> */}
+                        {/* <Reveal> */}
+                        {item.data.map((i, index) => {
+                          return (
+                            <>
+                              <p>{i.skill}</p>
+                              <motion.div
+                                className="skill-info mt-1 mb-3"
+                                key={index}
+                                variants={fadeInAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                // viewport={{ once: true }}
+                                custom={index}
+                              >
                                 <ProgressBar
                                   striped
                                   variant="danger"
@@ -93,21 +116,11 @@ const Skills = () => {
                                   // style={{ color: "#B923E1" }}
                                   className="progressVisualPart"
                                 />
-                                {/* <ProgressLine
-                              label={`${i.skill}`}
-                              backgroundColor="lightgrey"
-                              visualParts={[
-                                {
-                                  percentage: `${i.rank}%`,
-                                  color: "blue",
-                                },
-                              ]}
-                            /> */}
-                                {/* </div> */}
-                              </div>
-                            );
-                          })}
-                        </Reveal>
+                              </motion.div>
+                            </>
+                          );
+                        })}
+                        {/* </Reveal> */}
                       </Card>
                     </Col>
                   );

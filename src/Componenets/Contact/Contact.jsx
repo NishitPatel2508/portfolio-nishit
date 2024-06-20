@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,9 +8,9 @@ import { IoCallSharp } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { ToastContainer, toast } from "react-toastify";
 // import SectionAnimationOnScroll from "../Global/Animation/SectionAnimationOnScroll";
-// import Reveal from "../Global/Animation/Reveal";
+import Reveal from "../Global/Animation/Reveal";
+import AnimatedText from "../Global/Animation/AnimatedText";
 
 const Contact = () => {
   const [msg, setMsg] = useState("");
@@ -48,7 +48,6 @@ const Contact = () => {
       console.log(res);
       setMsg(res.message);
       setTimeout(() => {
-        toast.success(res.message);
         setUserMsg("");
         setEmail("");
         setName("");
@@ -65,7 +64,12 @@ const Contact = () => {
         {/* <Stack gap={4}> */}
         <Row>
           <Col xs lg="12" className="d-flex justify-content-center ">
-            <h1 className="contact-title">Get in touch</h1>
+            {/* <h1 className="contact-title">Get in touch</h1> */}
+            <AnimatedText
+              className="contact-title"
+              txt="Get in touch"
+              el="h1"
+            />
           </Col>
         </Row>
         <Row className="p-3" gap={3}>
@@ -76,7 +80,12 @@ const Contact = () => {
           >
             <Row className="gap-2">
               <Col md={12}>
-                <h1> Let's talk</h1>
+                <AnimatedText
+                  className="contact-title"
+                  txt="Let's talk"
+                  el="h1"
+                />
+                {/* <h1> </h1> */}
               </Col>
               <Col md={12}>
                 <p>
@@ -103,6 +112,7 @@ const Contact = () => {
                     style={{ textDecoration: "none", color: "#ffff" }}
                   >
                     nishitpatel78638@gmail.com
+                    {/* {`${originalMail}`} */}
                   </a>
                 </p>
               </Col>
@@ -143,49 +153,56 @@ const Contact = () => {
             // gap={3}
           >
             <Form className="w-100" onSubmit={onSubmit}>
-              <Form.Group
-                className="mb-2 pr-3"
-                // controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label className="text-white fs-5">Your Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Nishit Patel"
-                  onChange={handleName}
-                  value={nameValue}
-                  name="first_name"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                // controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label className="text-white fs-5">
-                  Your Email address
-                </Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="name@example.com"
-                  onChange={handleEmail}
-                  value={email}
-                  name="email"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                // controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label className="text-white fs-5">
-                  Your Message
-                </Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={5}
-                  onChange={handleMsg}
-                  value={userMsg}
-                  name="msg"
-                />
-              </Form.Group>
+              <Reveal>
+                <Form.Group
+                  className="mb-2 pr-3"
+                  // controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label className="text-white fs-5">Your Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Nishit Patel"
+                    onChange={handleName}
+                    value={nameValue}
+                    name="first_name"
+                  />
+                </Form.Group>
+              </Reveal>
+              <Reveal>
+                <Form.Group
+                  className="mb-3"
+                  // controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label className="text-white fs-5">
+                    Your Email address
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="name@example.com"
+                    onChange={handleEmail}
+                    value={email}
+                    name="email"
+                  />
+                </Form.Group>
+              </Reveal>
+              <Reveal>
+                <Form.Group
+                  className="mb-3"
+                  // controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label className="text-white fs-5">
+                    Your Message
+                  </Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={5}
+                    onChange={handleMsg}
+                    placeholder="Enter Your Message"
+                    value={userMsg}
+                    name="msg"
+                  />
+                </Form.Group>
+              </Reveal>
               {/* <label className="text-white text-center">Nishit</label> */}
               <Button className="btnStyle" type="submit">
                 Submit
