@@ -229,7 +229,7 @@ const Footer = () => {
               <BsInstagram className="insta" />
             </a>
             <a
-              href="https://twitter.com/home"
+              href="https://x.com/NishitPatel25"
               className="fs-5"
               style={{ color: "white", textDecoration: "none" }}
               target="_blank"

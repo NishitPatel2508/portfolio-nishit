@@ -30,7 +30,7 @@
     font-size: 22px;
     font-weight: 500;
 }
-.home-text span{
+.home-text {
     background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
     background-clip: text;
     -webkit-background-clip: text;
