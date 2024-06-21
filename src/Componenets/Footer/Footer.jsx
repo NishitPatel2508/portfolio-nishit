@@ -13,10 +13,10 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   const handlePrivacyPolicy = () => {
-    navigate("/privacypolicy");
+    navigate("/portfolio-nishit/privacypolicy");
   };
   const handleTermsOfServices = () => {
-    navigate("/termsofservices");
+    navigate("/portfolio-nishit/termsofservices");
   };
   return (
     <section id="footer">

@@ -21,7 +21,7 @@ const NavBar = () => {
   // }
   const handleHome = () => {
     setShow(false);
-    navigate("/");
+    navigate("/portfolio-nishit/");
   };
   return (
     <>
