@@ -7,12 +7,22 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+
 const NavBar = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const navigate = useNavigate();
+  // const handleAboutMe = () =>{
+  //   setShow(false);
+  //   navigate("/aboutme")
+  // }
+  const handleHome = () => {
+    setShow(false);
+    navigate("/");
+  };
   return (
     <>
       <section id="navbar">
@@ -28,7 +38,7 @@ const NavBar = () => {
             color="#ffff"
           >
             <Container>
-              <Navbar.Brand href="#">NISHIT</Navbar.Brand>
+              <Navbar.Brand onClick={handleHome}>NISHIT</Navbar.Brand>
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
                 onClick={handleShow}
@@ -43,6 +53,7 @@ const NavBar = () => {
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title
                     id={`offcanvasNavbarLabel-expand-${expand}`}
+                    onClick={handleHome}
                     //
                   >
                     NISHIT
@@ -62,7 +73,7 @@ const NavBar = () => {
                         smooth={true}
                         duration={100}
                         style={{ textDecoration: "none", color: "inherit" }}
-                        onClick={handleClose}
+                        onClick={handleHome}
                       >
                         Home
                       </Link>

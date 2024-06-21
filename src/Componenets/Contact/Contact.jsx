@@ -64,12 +64,12 @@ const Contact = () => {
         {/* <Stack gap={4}> */}
         <Row>
           <Col xs lg="12" className="d-flex justify-content-center ">
-            {/* <h1 className="contact-title">Get in touch</h1> */}
-            <AnimatedText
+            <h1 className="contact-title">Get in touch</h1>
+            {/* <AnimatedText
               className="contact-title"
               txt="Get in touch"
               el="h1"
-            />
+            /> */}
           </Col>
         </Row>
         <Row className="p-3" gap={3}>

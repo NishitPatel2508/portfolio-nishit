@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Skills.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,11 +7,8 @@ import Stack from "react-bootstrap/Stack";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Card from "react-bootstrap/Card";
 import { skills_data } from "../../data/skills_data";
-import { motion, useAnimation, useInView } from "framer-motion";
-import Reveal from "../Global/Animation/Reveal";
+import { motion } from "framer-motion";
 
-import ProgressLine from "./ProgressLine";
-import SectionAnimationOnScroll from "../Global/Animation/SectionAnimationOnScroll";
 const Skills = () => {
   const visualParts = [
     {

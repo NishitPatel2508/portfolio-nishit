@@ -1,0 +1,29 @@
+#termsofservices{
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    margin-top: 15px;
+    background: #161513;
+}
+.termsofservices-title{
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(0deg, rgba(195,34,56,1) 0%, rgba(245,86,42,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.heading{
+    color: aqua;
+    font-weight: 500;
+}
+.subheading{
+    text-decoration: none;
+    /* color: aqua; */
+    font-weight: 500;
+    margin-top: 10px;
+    background: linear-gradient(0deg, rgb(240, 56, 10) 0%, rgb(226, 54, 24) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
