@@ -18,9 +18,9 @@ function App() {
     <BrowserRouter>
         <NavBar/>
       <Routes>
-        <Route path='/' element={<AllSubComponents/>}/>
-        <Route path="/privacypolicy" element={  <PrivacyPolicy/>}/>
-        <Route path="/termsofservices" element={  <TermsOfServices/>}/>
+        <Route path='/portfolio-nishit/' element={<AllSubComponents/>}/>
+        <Route path="/portfolio-nishit/privacypolicy" element={  <PrivacyPolicy/>}/>
+        <Route path="/portfolio-nishit/termsofservices" element={  <TermsOfServices/>}/>
       </Routes>
       <GoToTop/>
       <Footer/> 
