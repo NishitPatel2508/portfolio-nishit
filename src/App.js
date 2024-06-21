@@ -1,14 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './Componenets/Navbar/NavBar';
-import Home from './Componenets/Home/Home';
-import AboutMe from './Componenets/About/AboutMe';
-import Services from './Componenets/Services/Services';
-import Skills from './Componenets/Skills/Skills';
-import Projects from './Componenets/Projects/Projects';
-import Contact from './Componenets/Contact/Contact';
 import Footer from './Componenets/Footer/Footer';
 import GoToTop from './Componenets/GoToTop/GoToTop';
 import "./App.css"
+import PrivacyPolicy from './Componenets/Footer/PrivacyPolicy/PrivacyPolicy';
+import AllSubComponents from './Componenets/Global/Animation/Main/AllSubComponents';
+import TermsOfServices from './Componenets/Footer/TermsOfServices/TermsOfServices';
+
 // import Reveal from './Componenets/Global/Reveal';
 
 
@@ -16,20 +15,17 @@ function App() {
 
   return (
     <>
-
-
+    <BrowserRouter>
         <NavBar/>
-        <Home />
-     
-        <AboutMe/>
-        <Services/>
-  
-        <Skills/>
-        <Projects/>
-        <Contact/>
-        <GoToTop/>
-        <Footer/>
-  
+      <Routes>
+        <Route path='/' element={<AllSubComponents/>}/>
+        <Route path="/privacypolicy" element={  <PrivacyPolicy/>}/>
+        <Route path="/termsofservices" element={  <TermsOfServices/>}/>
+      </Routes>
+      <GoToTop/>
+      <Footer/> 
+    </BrowserRouter>
+
     </>
   );
 }
