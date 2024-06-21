@@ -1,6 +1,6 @@
 #skills{
     background: #161513;
-    height: 100vh;
+    height: max-content
 }
 .skill-info p{
     color: #ffff;
@@ -30,5 +30,8 @@
 .skill-card:hover{
     border: 3px solid #DA7C25;
 }
-
-  
+@media (max-width:768px){
+    #skills{
+        height: max-content
+    }
+}

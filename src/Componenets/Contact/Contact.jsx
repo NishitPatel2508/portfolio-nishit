@@ -153,56 +153,53 @@ const Contact = () => {
             // gap={3}
           >
             <Form className="w-100" onSubmit={onSubmit}>
-              <Reveal>
-                <Form.Group
-                  className="mb-2 pr-3"
-                  // controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label className="text-white fs-5">Your Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Nishit Patel"
-                    onChange={handleName}
-                    value={nameValue}
-                    name="first_name"
-                  />
-                </Form.Group>
-              </Reveal>
-              <Reveal>
-                <Form.Group
-                  className="mb-3"
-                  // controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label className="text-white fs-5">
-                    Your Email address
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="name@example.com"
-                    onChange={handleEmail}
-                    value={email}
-                    name="email"
-                  />
-                </Form.Group>
-              </Reveal>
-              <Reveal>
-                <Form.Group
-                  className="mb-3"
-                  // controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label className="text-white fs-5">
-                    Your Message
-                  </Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={5}
-                    onChange={handleMsg}
-                    placeholder="Enter Your Message"
-                    value={userMsg}
-                    name="msg"
-                  />
-                </Form.Group>
-              </Reveal>
+              <Form.Group
+                className="mb-2 pr-3"
+                // controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label className="text-white fs-5">Your Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Nishit Patel"
+                  onChange={handleName}
+                  value={nameValue}
+                  name="first_name"
+                />
+              </Form.Group>
+
+              <Form.Group
+                className="mb-3"
+                // controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label className="text-white fs-5">
+                  Your Email address
+                </Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="name@example.com"
+                  onChange={handleEmail}
+                  value={email}
+                  name="email"
+                />
+              </Form.Group>
+
+              <Form.Group
+                className="mb-3"
+                // controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label className="text-white fs-5">
+                  Your Message
+                </Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={5}
+                  onChange={handleMsg}
+                  placeholder="Enter Your Message"
+                  value={userMsg}
+                  name="msg"
+                />
+              </Form.Group>
+
               {/* <label className="text-white text-center">Nishit</label> */}
               <Button className="btnStyle" type="submit">
                 Submit

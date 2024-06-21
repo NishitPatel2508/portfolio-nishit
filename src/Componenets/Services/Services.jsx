@@ -15,7 +15,7 @@ import Reveal from "../Global/Animation/Reveal";
 const Services = () => {
   return (
     <section id="services" className="d-flex ">
-      <Container className="mb-5">
+      <Container className="mb-5 mt-3">
         <Row>
           <Col className="d-flex justify-content-center ">
             <h1 className="services-title" style={{ color: "white" }}>
