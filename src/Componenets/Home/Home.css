@@ -1,11 +1,7 @@
 #home{
     background: #161513;
-    height: calc(100vh-100px);
     overflow: hidden;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* margin-top: 10px; */
+   
     .slidingTextContainer{
         position: absolute;
         font-size: 20vh;

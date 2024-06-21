@@ -1,6 +1,6 @@
 #contact{
     background: #161513;
-    height: 100vh;
+    height: max-content;
 }
 .contact-title{
     font-size: 40px;

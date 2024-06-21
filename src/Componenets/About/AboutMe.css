@@ -1,6 +1,6 @@
 #about{   
     background: #161513;
-    height: 100vh;
+    height: max-content;
 }
 .about-left-img{
     height: 250px;

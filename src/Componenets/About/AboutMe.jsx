@@ -23,10 +23,7 @@ const AboutMe = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], ["50deg", "-18deg"]);
 
   return (
-    <section
-      id="about"
-      className="d-flex justify-content-center align-items-center "
-    >
+    <section id="about" className="d-flex justify-content-center ">
       {/* <SectionAnimationOnScroll> */}
       {/* <motion.div
         ref={ref}
@@ -46,7 +43,7 @@ const AboutMe = () => {
           amount: "all",
         }}
       > */}
-      <Container className="mb-5">
+      <Container className="mb-5 mt-5">
         <Stack gap={4}>
           <Row>
             <Col className="d-flex justify-content-center">
