@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-nishit/static/css/main.318de2f0.css",
+    "main.css": "/portfolio-nishit/static/css/main.c4e75174.css",
     "main.js": "/portfolio-nishit/static/js/main.00f80c4d.js",
     "static/js/453.1407b060.chunk.js": "/portfolio-nishit/static/js/453.1407b060.chunk.js",
     "static/media/t1.png": "/portfolio-nishit/static/media/t1.0615b4b0b24f708c84d6.png",
@@ -8,12 +8,12 @@
     "static/media/Nishit_Resume.pdf": "/portfolio-nishit/static/media/Nishit_Resume.85ef3aa05032c15e0c19.pdf",
     "static/media/brainwave.png": "/portfolio-nishit/static/media/brainwave.500fad4646bb40531cfa.png",
     "index.html": "/portfolio-nishit/index.html",
-    "main.318de2f0.css.map": "/portfolio-nishit/static/css/main.318de2f0.css.map",
+    "main.c4e75174.css.map": "/portfolio-nishit/static/css/main.c4e75174.css.map",
     "main.00f80c4d.js.map": "/portfolio-nishit/static/js/main.00f80c4d.js.map",
     "453.1407b060.chunk.js.map": "/portfolio-nishit/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.318de2f0.css",
+    "static/css/main.c4e75174.css",
     "static/js/main.00f80c4d.js"
   ]
 }
