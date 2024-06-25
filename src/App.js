@@ -16,11 +16,13 @@ function App() {
   return (
     <>
     <BrowserRouter>
-        <NavBar/>
+        {/* <NavBar/> */}
       <Routes>
-        <Route path='/portfolio-nishit/' element={<AllSubComponents/>}/>
-        <Route path="/portfolio-nishit/privacypolicy" element={  <PrivacyPolicy/>}/>
-        <Route path="/portfolio-nishit/termsofservices" element={  <TermsOfServices/>}/>
+        <Route path="/" element={<NavBar/>}>
+        <Route index element={<AllSubComponents/>}/>
+        <Route path="/privacypolicy" element={  <PrivacyPolicy/>}/>
+        <Route path="/termsofservices" element={  <TermsOfServices/>}/>
+          </Route>
       </Routes>
       <GoToTop/>
       <Footer/> 

@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
 const NavBar = () => {
   const [show, setShow] = useState(false);
 
@@ -21,7 +21,7 @@ const NavBar = () => {
   // }
   const handleHome = () => {
     setShow(false);
-    navigate("/portfolio-nishit/");
+    navigate("/");
   };
   return (
     <>
@@ -164,6 +164,7 @@ const NavBar = () => {
           </Navbar>
         ))}
       </section>
+      <Outlet />
     </>
   );
 };
